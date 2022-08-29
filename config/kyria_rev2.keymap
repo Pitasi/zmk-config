@@ -18,10 +18,10 @@
 		default_layer {
 			label = "DEFAULT";
 			bindings = <
-	&kp TAB         &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+	&kp TAB         &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
 	&mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G                            &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT       &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                &kp LGUI &mo LOWER &kp RET &kp SPACE &kp RET        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+	&mt LSHFT LPAR  &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RPAR
+	                &kp LGUI &mo LOWER &kp RET &kp SPACE &kp RET        &kp RET  &kp SPACE  &kp SPACE &kp BSPC &kp RALT
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -30,10 +30,10 @@
 		raise_layer {
 			label = "LOWER";
 			bindings = <
-	&kp X           &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                       &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH
-	&mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G                            &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT       &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                &kp LGUI &mo LOWER &kp RET &kp SPACE &kp RET        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+	&kp GRAVE    	&kp N1 &kp N2 &kp N3 &kp N4 &kp N5                       &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
+	&trans       	&trans &trans &trans &trans &trans                       &kp LBKT &kp RBKT &kp MINUS &kp PLUS &kp BSLH &trans
+	&mt LSHFT LPAR  &trans &trans &trans &trans &trans &trans &trans         &trans &trans &trans   &trans   &trans &trans &trans &mt RSHFT RPAR
+	                &trans &mo LOWER &trans &trans &trans                    &trans &trans &trans   &trans   &trans
 			>;
 		};
 	};
