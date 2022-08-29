@@ -12,29 +12,39 @@
 #define RAISE   2
 
 / {
-	keymap {
-		compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-		default_layer {
-			label = "DEFAULT";
-			bindings = <
-	&kp TAB         &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-	&mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G                            &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&mt LSHFT LPAR  &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RPAR
-	                &kp LGUI &mo LOWER &kp RET &kp SPACE &kp RET        &kp RET  &kp SPACE  &kp SPACE &kp BSPC &kp RALT
-			>;
+        default_layer {
+            label = "DEFAULT";
+            bindings = <
+    &kp TAB         &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+    &mt LCTRL ESC   &kp A &kp S &kp D &kp F &kp G                            &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+    &mt LSHFT LPAR  &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RPAR
+                    &kp LGUI &mo LOWER &kp RET &kp SPACE &kp RET        &kp RET  &kp SPACE  &kp SPACE &kp BSPC &kp RALT
+            >;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
 
-		raise_layer {
-			label = "LOWER";
-			bindings = <
-	&kp GRAVE    	&kp N1 &kp N2 &kp N3 &kp N4 &kp N5                       &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
-	&trans       	&trans &trans &trans &trans &trans                       &kp LBKT &kp RBKT &kp MINUS &kp PLUS &kp BSLH &trans
-	&mt LSHFT LPAR  &trans &trans &trans &trans &trans &trans &trans         &trans &trans &trans   &trans   &trans &trans &trans &mt RSHFT RPAR
-	                &trans &mo LOWER &trans &trans &trans                    &trans &trans &trans   &trans   &trans
-			>;
-		};
-	};
+        raise_layer {
+            label = "LOWER";
+            bindings = <
+    &kp GRAVE        &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
+    &trans           &F12 &F11 &F10 &F9 &F8                                  &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &kp BSLH &trans
+    &mt LSHFT LPAR  &F1  &F2  &F3  &F4 &F5 &F6 &F7                           &trans &trans &trans   &trans   &kp COMMA &kp DOT &kp FSLH &mt RSHFT RPAR
+                    &trans &mo LOWER &trans &trans &trans                    &trans &trans &trans   &trans   &trans
+            >;
+        };
+
+        raise_layer {
+            label = "RAISE";
+            bindings = <
+    &trans &trans &trans &trans &trans &trans                                &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans                                &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans &trans &trans &trans
+                         &trans &trans &trans &trans &trans                  &trans &trans &trans &trans &trans
+            >;
+        };
+    };
 };
